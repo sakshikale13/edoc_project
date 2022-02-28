@@ -1,6 +1,6 @@
 var express = require("express");
 var bodyparser = require("body-parser");
-const Documents = require("../models/documents");
+const Documents = require("../models/Documents");
 var jsonparser = bodyparser.json();
 const router = express.Router();
 
@@ -32,7 +32,8 @@ router.post("/get", async (req, res) => {
 });
 router.post("/delete", async (req, res) => {
     let body = req.body;
-    await documents.findByIdAndDelete(body.data.id);
+    // await documents.findByIdAndDelete(body.data.id);
+    await Documents.findByIdAndDelete(body.data.id);
     let data = {
         "data":
         {

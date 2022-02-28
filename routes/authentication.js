@@ -8,6 +8,8 @@ router.post("/login/", async(req, res)=>{
     
     let body = req.body;
     let admin = await Admin.find().and([{email: body.data.email}, {password: body.data.password}]);
+    console.log(body);
+    console.log(admin);
     let data = {
         "data":
         {

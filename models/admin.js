@@ -8,5 +8,5 @@ const schema = new Schema(
         authkey:{type:String}
     }
 );
-const Admin = mongoose.model("admin", schema);
+const Admin = mongoose.model("admins", schema);
 module.exports = Admin;
